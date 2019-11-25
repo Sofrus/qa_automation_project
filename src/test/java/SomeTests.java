@@ -12,7 +12,7 @@ public class SomeTests {
         $("#header-search").val("холодильник").pressEnter();
         $(".link.n-link_theme_blue.link_type_cpc").click();
         $(withText("Холодильник")).should(exist);
-        //$(withText("С этим товаром смотрят")).shouldBe(visible);
+        $(withText("С этим товаром смотрят")).shouldBe(visible);
 
 
         //$(byText("Холодильник ATLANT ХМ 4208-000")).should(exist);
