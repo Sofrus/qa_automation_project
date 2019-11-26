@@ -17,15 +17,7 @@ public class LoginTests {
         $("#Email_auth").val("sofrus@gmail.com").pressTab();
         $("#Password").val("123456").pressEnter();
         $(withText("Выйти")).should(exist);
-
-
-//        $(".link.n-link_theme_blue.link_type_cpc").click();
-//
-//        $(withText("С этим товаром смотрят")).shouldBe(visible);
-
-
-        //$(byText("Холодильник ATLANT ХМ 4208-000")).should(exist);
-
+        $(withText("sofrus@gmail.com")).should(exist);
 
     }
 }
