@@ -20,6 +20,5 @@ public class LoginTests {
         $("#Password").setValue(dotenv.get("Password")).pressEnter();
         $(withText("Выйти")).should(exist);
         $(withText("sofrus@gmail.com")).should(exist);
-
     }
 }
