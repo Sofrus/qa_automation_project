@@ -1,4 +1,5 @@
 import com.codeborne.selenide.SelenideElement;
+import io.github.cdimascio.dotenv.Dotenv;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -9,13 +10,14 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class Vtargete {
+    Dotenv dotenv = Dotenv.load();
     @Test
     @DisplayName("Positive test")
     void positiveTest() {
         open("https://stage.vtargete.ru/login/vk");
 
-        $(byName("email")).setValue("sofrus@gmail.com");
-        $(byName("pass")).setValue("Rst060985V").pressEnter();
+        $(byName("email")).setValue(dotenv.get("Login_vk"));
+        $(byName("pass")).setValue(dotenv.get("Password_vk")).pressEnter();
 
         open("http://stage.vtargete.ru/branch/FRONT-26-create-col-def-by-user/tool/#/1605539798/null/1013857273");
 
