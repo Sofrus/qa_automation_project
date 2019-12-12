@@ -21,6 +21,7 @@
 *.iml
 
 # Project gen files
+.env
 .idea
 .gradle/
 build/
